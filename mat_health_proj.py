@@ -16,3 +16,8 @@ print(maternal_health_risk.metadata)
 # variable information 
 print(maternal_health_risk.variables) 
 
+n = 2 // 3
+print(n)
+
+nr = range(1, 10)
+print(nr)
