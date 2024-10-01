@@ -17,7 +17,7 @@ Maternal Health is a critical aspect of public health, especially in developing 
   - [Model Training Evaluation](#model-training-evaluation)
     - [Multinomial Logistic Regression](#multinomial-logistic-regression)
     - [Random Forest Classifier](#random-forest-classifier)
-    - [Optimized XGBoost Classifier](#optimized-xgboost-classifier)
+    - [XGBoost Classifier](#xgboost-classifier)
   - [Results](#results)
     - [Model Performance Comparison](#model-performance-comparison)
     - [Confusion Matrices](#confusion-matrices)
@@ -70,34 +70,36 @@ The **Maternal Health Risk Dataset** came from the [UCI Machine Learning Reposit
 
 - **Training**: Used a multinomial logisitic regression model with L-BFGS solver and a maximum of 1000 iterations.
 - **Feature Importance**: Identified 'BS' (Blood Sugar) as the most significant feature, while 'Age' was the least significant.
-- **Accuracy**: Achieved an accuracy of **81.60%**.
+- **Accuracy**: Achieved an accuracy of **65.02%**.
 - **Confusion Matrix and ROC Curve**: Evaluated model performance using confusion matrix and ROC curves for each class.
 
 <p align="center">
     <img src="images/logistic_regression_feature_importance.png" alt="Logistic Regression Feature Importance" width="600">
+    <img src="images/roc_logistic_regression.png" alt="Logistic Regression ROC" width="600">
 </p>
 
 ### Random Forest Classifier
 
 - **Training**: Trained a Random Forest model with 100 estimators.
 - **Feature Importance**: Found 'BS' (Blood Sugar) to be the most important feature, and 'HeartRate' the least significant.
-- **Accuracy**: Achieved an accuracy of **93.20%**.
+- **Accuracy**: Achieved an accuracy of **81.28%**.
 - **Confusion Matrix and ROC Curve**: Used to assess the model's predictive capabilities.
 
 <p align="center">
     <img src="images/rfc_feature_importance.png" alt="Random Forest Feature Importance" width="600">
+    <img src="images/roc_random_forest.png" alt="Random Forest ROC" width="600">
 </p>
 
-### Optimized XGBoost Classifier
+### XGBoost Classifier
 
-- **Training**: Implemented an XGBoost classifier with hyperparameter tuning using Grid Search CV.
-- **Best Parameters**: 'max_depth': 3, 'n_estimators': 300.
+- **Training**: Implemented an XGBoost classifier and tested with hyperparameter tuning using Grid Search CV.
 - **Feature Importance**: Identified 'SystolicBP' as the most significant feature, with 'Age' being the least.
-- **Accuracy**: Achieved the highest accuracy of **93.88%**.
+- **Accuracy**: Achieved the highest accuracy of **84.73%**.
 - **Confusion Matrix and ROC Curve**: Showed improved performance over other models.
 
 <p align="center">
     <img src="images/xgb_feature_importance.png" alt="XGBoost Feature Importance" width="600">
+    <img src="images/roc_xgb.png" alt="XGBoost ROC" width="600">
 </p>
 
 ## Results
